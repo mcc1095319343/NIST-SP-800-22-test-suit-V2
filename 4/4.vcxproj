@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BCE07812-C4F6-4F7E-8461-963685F3033D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>My4</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\approximateEntropy.h" />
+    <ClInclude Include="include\basicDefinition.h" />
+    <ClInclude Include="include\blockFrequency.h" />
+    <ClInclude Include="include\cephes.h" />
+    <ClInclude Include="include\cJSON.h" />
+    <ClInclude Include="include\cumulativeSums.h" />
+    <ClInclude Include="include\c_file_operation.h" />
+    <ClInclude Include="include\dfft.h" />
+    <ClInclude Include="include\discreteFourierTransform.h" />
+    <ClInclude Include="include\errorCode.h" />
+    <ClInclude Include="include\frequency.h" />
+    <ClInclude Include="include\linearComplexity.h" />
+    <ClInclude Include="include\longestRunOfOnes.h" />
+    <ClInclude Include="include\matrix.h" />
+    <ClInclude Include="include\nonOverlappingTemplateMatchings.h" />
+    <ClInclude Include="include\overlappingTemplateMatchings.h" />
+    <ClInclude Include="include\randomExcursions.h" />
+    <ClInclude Include="include\randomExcursionsVariant.h" />
+    <ClInclude Include="include\rank.h" />
+    <ClInclude Include="include\rnd_test.h" />
+    <ClInclude Include="include\runs.h" />
+    <ClInclude Include="include\serial.h" />
+    <ClInclude Include="include\universal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\approximateEntropy\approximateEntropy.c" />
+    <ClCompile Include="src\blockFrequency\blockFrequency.c" />
+    <ClCompile Include="src\cJSON.c" />
+    <ClCompile Include="src\cumulativeSums\cumulativeSums.c" />
+    <ClCompile Include="src\c_file_operation.c" />
+    <ClCompile Include="src\discreteFourierTransform\discreteFourierTransform.c" />
+    <ClCompile Include="src\frequency\frequency.c" />
+    <ClCompile Include="src\linearComplexity\linearComplexity.c" />
+    <ClCompile Include="src\longestRunOfOnes\longestRunOfOnes.c" />
+    <ClCompile Include="src\main.c" />
+    <ClCompile Include="src\math\cephes.c" />
+    <ClCompile Include="src\math\dfft.c" />
+    <ClCompile Include="src\math\matrix.c" />
+    <ClCompile Include="src\nonOverlappingTemplateMatchings\nonOverlappingTemplateMatchings.c" />
+    <ClCompile Include="src\overlappingTemplateMatchings\overlappingTemplateMatchings.c" />
+    <ClCompile Include="src\randomExcursionsVariant\randomExcursionsVariant.c" />
+    <ClCompile Include="src\randomExcursions\randomExcursions.c" />
+    <ClCompile Include="src\rank\rank.c" />
+    <ClCompile Include="src\rnd_test.c" />
+    <ClCompile Include="src\runs\runs.c" />
+    <ClCompile Include="src\serial\serial.c" />
+    <ClCompile Include="src\universal\universal.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
